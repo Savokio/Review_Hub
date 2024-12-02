@@ -4,6 +4,7 @@ app = Flask(__name__)
 from crit_info import get_crit_db, close_crit_db, get_crit_info
 import json
 
+
 @app.route('/templates/<path:filename>')
 def serve_templates_file(filename):
     return send_from_directory("", filename)
@@ -44,6 +45,8 @@ def login():
     return  render_template('log.html')
 
 
+
+
 @app.route('/register', methods = ['GET', 'POST'])
 def register():
     return render_template('reg.html')
@@ -51,7 +54,6 @@ def register():
 @app.route('/critics', methods = ['GET', 'POST']) #все критики
 def crit_library():
     return render_template('crit_lib.html',info=get_crit_info())
-
 
 
 @app.route('/submit_login', methods=['POST'])
