@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ReviewHub</title>
+    <link rel="stylesheet" href="./css/main.css" />
+  </head>
+  
+  <body>
+    <div class="wrapper">
+      <header class="topnav">
+        <img class=logo src="img/Untitled 7.png" alt="" /> <!--иконка -->
+        <form class="d-flex" role="search"> <!-- верхний поисковик-->
+          <input
+            class="form-control me-2"
+            type="search"
+            placeholder="Search"
+            aria-label="Search"/>
+        <nav>
+          <ul>
+            </form>
+            <li class="active"><a href="{{ url_for('home') }}">Home</a></li> <!-- url_for функция которая берёт url из app.route указанной функции-->
+            <li class="#"><a href="{{ url_for('about') }}">About us</a></li>
+            <li class="#"><a href="{{ url_for('profile')}}">Profile</a></li>
+            <li class="btn"><a href="{{ url_for('login') }}">Log in</a></li>
+          </ul>
+        </nav>
+      </header>
+      
+      <div class="hero container"> <!--Заглавие-->
+        <div class="hero--info">
+          <h2>ReviewHub</h2>
+           <!--По логике вещей должно выдавать список имён,для меня в лучшем случае выдавал переменную листом,то есть с ковычками-->
+          <h1>World of reviews</h1>
+        </div>
+
+      </div>
+        <form class="d-flex" role="search"> <!-- поисковик-->
+          <input
+            class="main-bar"
+            type="search"
+            placeholder="Search"
+            aria-label="Search"
+          />
+      <div class="container trending"> <!--Рекомендации критиков-->
+        <h3>Top critics</h3>
+        <div class="films">
+          <!-- Savok-->
+        {%for i in range (0,3)%}
+        <div class="card">
+          <img src="img/doug.jpg"  style="width:20%"> 
+          <div class="card_container">
+          <h4><b> {{ info[i]["name"] }} </b></h4>
+          </div> 
+        </div>
+        {% endfor %}
+        </div> 
+        
+        <div> <!--Ссылка на страницу со всеми критиками-->
+          <a href="{{ url_for('crit_library') }}" class="see-all"> SEE ALL</a> 
+        </div>
+      </div>
+      
+
+
+      <div class="container text">
+        {{"Do you want to support or refute the critic's opinion? Log in and share your impressions of movies and TV series!"}} 
+      </div> 
+
+      <div class="container email">
+        <h3>GOT ANY QUESTIONS?</h3>
+        <p>
+          We will be happy to contact you to discuss your questions and provide
+          assistance!
+        </p>
+        <div class="block">
+          <div>
+            <h4>Contact us</h4>
+            <p>Enter your email address</p>
+          </div>
+          <div>
+            <input
+              type="email"
+              id="emailField"
+              placeholder="Enter your email address"
+            />
+            <button onclick="checkEmail()">Continue</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <footer>
+      <div class="blocks container">
+        <div>
+          <p>The best website ever</p>
+        </div>
+        <div>
+          <h4>About us</h4>
+          <ul>
+            <li>Privacy Policy</li>
+            <li>License</li>
+            <li>Our managers</li>
+            <li>Our critics</li>
+          </ul>
+        </div>
+        <div>
+          <h4>Get a contract</h4>
+          <p>File a complaint</p>
+          <p>Support us</p>
+        </div>
+      </div>
+      <hr />
+      <p>Coopyright * 2024 All rights recerved</p>
+    </footer>
+    <script>
+      function checkEmail() {
+        let email = document.querySelector("#emailField");
+        alert(email.value);
+      }
+    </script>
+  </body>
+</html>

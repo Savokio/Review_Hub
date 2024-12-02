@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ReviewHub</title>
+    <link rel="stylesheet" href="./css/main.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="container">
+        <span class="logo"></span>
+        <nav>
+          <ul>
+            <li class="active"><a href="{{ url_for('home') }}">Home</a></li> <!-- url_for функция которая берёт url из app.route указанной функции-->
+            <li class="#"><a href="{{ url_for('about') }}">About us</a></li>
+            <li class="#"><a href="{{ url_for('profile')}}">Profile</a></li>
+            <li class="btn"><a href="{{ url_for('login') }}">Log in</a></li>
+            <nav class="navbar bg-body-tertiary">
+              <div class="container-fluid">
+                <form class="d-flex" role="search">
+                  <input
+                    class="form-control me-2"
+                    type="search"
+                    placeholder="Search"
+                    aria-label="Search"
+                  />
+                  <button class="btn btn-outline-success" type="submit">
+                    Enter
+                  </button>
+                </form>
+              </div>
+            </nav>
+          </ul>
+        </nav>
+      </header>
+
+      <div class="regist">
+        <div class="container">
+          <h2>Registration</h2>
+          <p>Enter your details below</p>
+
+          <form>
+            <div class="inline">
+              <div>
+                <label>First Name</label>
+                <input type="text" />
+              </div>
+              <div>
+                <label>Last Name</label>
+                <input type="text" />
+              </div>
+            </div>
+            <div class="inline">
+              <div>
+                <label>Your Age</label>
+                <input type="text" />
+              </div>
+              <div>
+                <label>Your Posision: Critic or Reader</label>
+                <input type="text" />
+              </div>
+            </div>
+            <label>Email Address</label>
+            <input type="email" class="one-list" />
+
+            <label>Bio</label>
+            <textarea class="one-list"></textarea>
+
+            <button type="button">Log In</button>
+          </form>
+        </div>
+      </div>
+    </div>
+    <footer>
+      <div class="blocks container">
+        <div>
+          <span class="logo">ReviewHub</span>
+          <p>The best website ever</p>
+        </div>
+        <div>
+          <h4>About us</h4>
+          <ul>
+            <li>Privacy Policy</li>
+            <li>License</li>
+            <li>Our managers</li>
+            <li>Our critics</li>
+          </ul>
+        </div>
+        <div>
+          <h4>Get a contract</h4>
+          <p>File a complaint</p>
+          <p>Support us</p>
+        </div>
+      </div>
+      <hr />
+      <p>Coopyright * 2024 All rights recerved</p>
+    </footer>
+  </body>
+</html>

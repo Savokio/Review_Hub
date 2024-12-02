@@ -1,0 +1,812 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-weight: 400;
+  color: #fff;
+  font-size: 16px;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 20%;
+}
+
+
+.logo{
+  max-width: 4%;
+  position: absolute;
+  top: 0;
+
+}
+
+.wrapper {
+  background: linear-gradient(
+    0deg,
+    rgba(50, 15, 158, 1) 0%,
+    rgba(62, 37, 138, 1) 38%,
+    rgba(1, 0, 4, 1) 100% 
+  );
+  width: 100%;
+}
+
+
+header {
+  padding: 25px 0;
+}
+
+header nav {
+  float: right;
+  width: 50%;
+}
+
+header nav ul {
+  list-style: none;
+  display: block;
+  justify-content: space-between;
+  z-index: 2;
+  position: absolute;
+  top: 10px;
+  right: 0px;
+}
+
+header nav ul li {
+  display: inline-block;
+}
+header nav ul li a {
+  color: #ffffff;
+}
+
+header nav ul li.active::after {
+  content: "";
+  display: block;
+  width: 65px;
+  height: 5px;
+  background:#6e30ff;
+  border-radius: 10px;
+}
+
+header nav ul li:not(.active):not(.btn) a:hover {
+  border: 0px solid #6e30ff;
+}
+
+header nav ul li.btn a,
+.email .block button {
+  background: #6e30ff;
+  padding: 9px 17px;
+  border-radius: 5px;
+  transition: all 500ms ease;
+}
+header nav ul li.btn a:hover,
+.email .block button:hover {
+  background-color: #620097;
+}
+.trending .films { 
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 40px 10px;
+}
+.lib {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 40px 10px;
+}
+
+.trending .films span {
+  display: block;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.container {
+  width: 1400px;
+  margin: 0 auto;
+}
+
+
+.lib-card{
+
+  
+}
+
+
+.card {
+  /* Add shadows to create the "card" effect */
+  background-color: rgb(30, 25, 32);
+  box-shadow: 0 4px 8px 5px rgba(0,0,0,0.2);
+  transition: 0.3s;
+  margin-left: 30px;
+}
+
+/* On mouse-over, add a deeper shadow */
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+/* SAVOK Add some padding inside the card container */
+.card_container {
+  padding: 10px 4px 5px;
+ 
+}
+
+/* Add a black background color to the top navigation */
+.topnav {
+  background-color: rgb(17, 17, 17);
+  overflow: hidden;
+  padding-bottom: 7px;
+  position: sticky;
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+  float: left;
+  color: #e5def7;
+  text-align: center;
+  padding: 3px 10px 4px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+  background-color: #6e30ff;
+  color: black;
+}
+
+/* Add a color to the active/current link */
+.topnav a.active {
+  background-color: #04AA6D;
+  color: white;
+}
+
+
+
+
+    
+
+
+/* dssf */
+
+.hero {
+  padding-bottom: 100px;
+  position: relative;
+  z-index: 1;
+}
+
+.info {
+  width: 530px;
+  padding-top: 70px;
+}
+
+.hero--info h2 {
+  background-image: linear-gradient(    0deg,
+    rgba(1, 0, 4, 1) 0%,
+    rgba(62, 37, 138, 1) 38%,
+    rgb(102, 15, 173) 100% );
+  color: transparent;
+  background-clip: text;
+  font-size: 75px;
+  font-weight: 600;
+  text-align: center;
+  margin-top: 30px;
+}
+
+
+
+.hero--info h1 {
+  color: #c5acd4;
+  margin-top: 20px;
+  font-size: 30px;
+  font-weight: 500;
+  font-style: italic;
+  text-align: center;
+}
+
+.hero--info p {
+  color: #fff;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 200%;
+  margin: 30px 0px;
+}
+
+.inf {
+  padding-bottom: 100px;
+  position: relative;
+  z-index: 1;
+}
+
+.inf {
+  width: 530px;
+  padding-top: 70px;
+}
+
+.inf h2 {
+  color: #6e30ff;
+  font-size: 30px;
+  font-weight: 600;
+}
+
+.inf h1 {
+  color: #fff;
+  font-size: 55px;
+  font-weight: 500;
+}
+
+.inf h3 {
+  color: #b1abff;
+  font-size: 30px;
+  font-weight: 9000;
+  padding-top: 40px;
+}
+
+.inf p4 {
+  color: #fff;
+  font-size: 22px;
+  font-weight: 200;
+  line-height: 200%;
+  margin: 20px px;
+}
+.inf p5 {
+  color: #fff;
+  font-size: 22px;
+  font-weight: 200;
+  line-height: 200%;
+  margin: 20px px;
+}
+.inf p6 {
+  color: #fff;
+  font-size: 22px;
+  font-weight: 200;
+  line-height: 200%;
+  margin: 20px px;
+}
+
+.hero--info .btn {
+  background: #1c0027;
+  color: #fff;
+  border-radius: 50px;
+  padding: 15px 30px;
+  border: 0;
+  transition: all 5000ms ease;
+  font-size: 17px;
+  margin-top: 20px;
+}
+
+.hero--info .btn:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+}
+
+.hero img {
+  position: absolute;
+  margin-left: auto;
+}
+
+.trending {
+  padding-top: 50px;
+}
+
+.trending h3 {
+  font-weight: 600;
+  font-size: 30px;
+}
+
+.trending .see-all {
+  color: #fff;
+  background: #6e30ff;
+  border-radius: 5px;
+  padding: 15px 25px;
+  display: flexbox;
+  transition: all 500ms ease;
+  margin-bottom: 40px;
+  margin-left: 40px;
+  
+}
+
+.trending .see-all:hover {
+  transform: scale(1.1);
+}
+
+
+
+.navbar {
+  display: flex;
+  align-items: right;
+  justify-content: space-between;
+  padding: 10px;
+}
+
+a,
+.btn-login {
+  margin-right: 10px;
+}
+
+.search-container {
+  display: flex;
+  align-items: center;
+}
+
+.form-control { /* топбарный поисковик */
+  background-color: #3b2357;
+  position: relative;
+  color: #fff;
+  border-radius: 10px;
+  border-color: #2a1636;
+  padding: 4px 5px;
+  border-radius: 5px 0 0 5px;
+  margin-left: auto;
+  margin-right: auto;
+  top: 0px;
+  display: block;
+  font-size: 16px;
+  width: 500px;
+  height: 40px;
+
+}
+
+.main-bar { /* поисковик главной страницы */
+  background-color: #281738;
+  position: relative;
+  color: #fff;
+  border: none;
+  padding: 7px 5px;
+  border-radius: 5px 0 0 5px;
+  margin: 0 auto;
+  display: block;
+  font-size: 25px;
+  margin-top: 100px;
+  font-style: italic;
+  width: 700px;
+  height: 70px;
+}
+
+.btn-outline-success {
+  background-color: #6e30ff;
+  color: #fff;
+  border: none;
+  padding: 9px 17px;
+  border-radius: 0 5px 5px 0;
+  font-size: 16px;
+}
+
+.btn-outline-success:hover {
+  background-color: #620097;
+  color: #000000;
+}
+
+.text {
+  padding: 50px 0;
+  font-size: 35px;
+  font-weight: 600;
+  text-align: center;
+  width: 800px;
+}
+
+.email {
+  padding-bottom: 120px;
+}
+
+.email h3 {
+  margin-top: 60px;
+  font-size: 30px;
+}
+
+.email .block {
+  background: #191947;
+  margin-top: 30px;
+  border-radius: 10px;
+  padding: 40px 3%;
+  width: 94%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.email .block h4 {
+  font-size: 30px;
+  font-weight: 500;
+}
+
+.email .block p {
+  font-weight: 500;
+}
+
+.email .block input {
+  background: #fff;
+  outline: none;
+  border: 0;
+  border-radius: 5px;
+  width: 380px;
+  padding: 20px 30px;
+  color: #000000;
+  position: relative;
+  right: -100px;
+  z-index: 1;
+  padding-right: 120px;
+}
+
+.email .block input::placeholder {
+  color: #000000;
+}
+
+.email .block button {
+  cursor: pointer;
+  border: 0;
+  padding: 15px 17px;
+  position: relative;
+  z-index: 2;
+  color: #fff;
+}
+
+footer {
+  background: #111;
+  padding: 50px 0;
+}
+
+footer .blocks {
+  display: flex;
+  justify-content: space-between;
+}
+
+footer .block p {
+  width: 300px;
+  margin: 15px 0;
+}
+
+footer .block h4 {
+  font-weight: 500;
+  font-size: 17px;
+}
+
+footer .block ul {
+  list-style: none;
+}
+
+footer .block ul li {
+  margin-top: 4px;
+}
+
+footer hr {
+  margin: 30px 0;
+  border: 0;
+  height: 0.6px;
+  background: #ccc;
+}
+
+footer > p {
+  text-align: center;
+}
+
+/*about us*/
+.hero-about {
+  position: relative;
+}
+
+.hero-about .info {
+  width: 700px;
+  padding: 100px 0;
+  text-align: center;
+}
+
+.hero-about .info h1 {
+  margin-bottom: 15px;
+  font-size: 50px;
+  text-align: center;
+}
+
+.hero-about .info p {
+  font-size: 20px;
+}
+
+.hero-about .info .btn {
+  background: #1c0027;
+  color: #fff;
+  border-radius: 50px;
+  padding: 15px 30px;
+  border: 0;
+  transition: all 500ms ease;
+  font-size: 17px;
+  margin-top: 20px;
+}
+
+.hero-about .info .btn:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+}
+
+.hero-about img {
+  position: absolute;
+  right: -50px;
+  top: 0;
+}
+
+.comms {
+  padding: 80px 0;
+}
+
+.comms h2 {
+  font: 25px;
+  margin-bottom: 40px;
+}
+
+.comms .blocks {
+  display: flex;
+  justify-content: space-between;
+}
+
+.comms .blocks .block {
+  width: 25%;
+  border-radius: 20px;
+  padding: 50px 35px;
+  background: #5a2aa7;
+}
+
+.comms .blocks .block h3 {
+  font-size: 20px;
+  margin: 20px 0;
+}
+.comms .blocks .block .badge {
+  border-radius: 16px;
+  padding: 10px 20px;
+}
+.comms .blocks .block .badge.purple {
+  background: #201236;
+}
+
+.comms .blocks .block .badge.blue {
+  background: #1f0c4b;
+}
+
+.comms .blocks .block .badge.indigo {
+  background: #130b44;
+}
+
+.hero-prof {
+  position: relative;
+  display: flex; /* Обеспечивает горизонтальное выравнивание */
+  align-items: flex-start; /* Вертикальное выравнивание по началу */
+}
+
+.hero-p .info-container {
+  display: flex;
+}
+.hero-p .info h1 {
+  margin-bottom: 90px;
+  font-size: 50px;
+  padding: 0px 10px;
+}
+
+.hero-p img {
+  position: absolute;
+  top: 50px;
+  right: 0;
+}
+
+.hero-prof .info-container {
+  display: flex;
+}
+
+.hero-prof .info,
+.hero-prof .info1 {
+  width: auto;
+  padding: 90px 10px;
+}
+
+.hero-prof .info p {
+  font-size: 25px;
+  margin: 0;
+}
+.hero-prof .info1 p {
+  font-size: 25px;
+  margin: 0;
+}
+
+.hero-prof .info .btn {
+  background: #1c0027;
+  color: #fff;
+  border-radius: 50px;
+  padding: 15px 30px;
+  border: 0;
+  transition: all 500ms ease;
+  font-size: 17px;
+  margin-top: 20px;
+}
+
+.hero-prof .info .btn:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+}
+
+.hero-prof img {
+  position: absolute;
+  right: 200px;
+  top: 0;
+}
+
+.regist {
+  padding: 70px 0;
+}
+
+.regist h1 {
+  text-align: center;
+  font-weight: 500;
+  font-size: 30px;
+}
+.regist h2 {
+  text-align: center;
+  font-weight: 500;
+  font-size: 30px;
+}
+.regist p {
+  text-align: center;
+  margin-top: 10px;
+  font-size: 20px;
+}
+
+.regist form {
+  margin: 80px auto;
+  width: 600;
+}
+
+.regist form .inline {
+  display: flex;
+  justify-content: space-between;
+}
+
+.regist form .inline > div {
+  width: 50%;
+}
+
+.regist form label {
+  color: #ffffff;
+  font-size: 19px;
+}
+
+.regist form input,
+.regist form textarea {
+  background: #beb1c7;
+  border-radius: 10px;
+  border: 0.6px solid #1c0027;
+  display: block;
+  width: 90%;
+  padding: 15px 10px;
+  outline: none;
+  color: #1c0027;
+  margin-top: 7px;
+  margin-bottom: 20px;
+}
+
+.regist form .one-line {
+  width: 96%;
+}
+
+.regist form textarea {
+  resize: none;
+  height: 200px;
+}
+
+.regist form button {
+  background: #1c0027;
+  border-radius: 5px;
+  border: 0;
+  float: right;
+  cursor: pointer;
+  color: #ffffff;
+  padding: 15px 35px;
+  transition: all 500ms ease;
+}
+
+.regist form button:hover {
+  background: #6e30ff;
+}
+
+.reg ul li {
+  display: inline-block;
+}
+.reg ul li a {
+  color: #ffffff;
+}
+
+.reg {
+  padding: 70px 0;
+}
+.reg h1 {
+  text-align: center;
+  font-weight: 500;
+  font-size: 30px;
+}
+.reg h2 {
+  text-align: center;
+  font-weight: 500;
+  font-size: 30px;
+}
+
+.reg button {
+  background: #1c0027;
+  border-radius: 5px;
+  border: 0;
+  float: right;
+  cursor: pointer;
+  color: #ffffff;
+  padding: 15px 35px;
+  transition: all 5000ms ease;
+}
+
+.reg button:hover {
+  background: #6e30ff;
+}
+
+.butt ul li.btn {
+  background: #1c0027;
+  padding: 13px 25px;
+  border: 0;
+  border-radius: 5px;
+  transition: all 5000ms ease;
+  float: right;
+  color: #ffffff;
+  cursor: pointer;
+}
+.butt ul li.btn:hover {
+  background: #6e30ff;
+}
+
+body {
+  font-family: Arial, sans-serif;
+}
+
+.info-table {
+  width: 50%;
+  margin: 20px auto;
+  border-collapse: collapse;
+}
+
+.row {
+  display: flex;
+  border-bottom: 1px solid #ddd;
+  padding: 8px 0;
+}
+
+.column {
+  padding: 8px;
+}
+
+.label {
+  width: 30%;
+  font-weight: bold;
+  text-align: left;
+  padding-right: 10px;
+}
+
+.value {
+  width: 70%;
+  text-align: left;
+}
+
+.value:empty::after {
+  content: "______";
+  color: gray;
+}
+
+.imm .btn {
+  background: #1c0027;
+  color: #fff;
+  border-radius: 50px;
+  padding: 15px 30px;
+  border: 0;
+  transition: all 5000ms ease;
+  font-size: 17px;
+  margin-top: 20px;
+}
+
+.imm .btn:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+}

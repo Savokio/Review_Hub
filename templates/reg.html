@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ReviewHub</title>
+    <link rel="stylesheet" href="./css/main.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="topnav">
+        <img class=logo src="img/Untitled 7.png" alt="" /> <!--иконка -->
+        <form class="d-flex" role="search"> <!-- поисковик-->
+          <input
+            class="form-control me-2"
+            type="search"
+            placeholder="Search"
+            aria-label="Search"
+          />
+        <nav>
+          <ul>
+            </form>
+            <li class="#"><a href="{{ url_for('home') }}">Home</a></li> <!-- url_for функция которая берёт url из app.route указанной функции-->
+            <li class="#"><a href="{{ url_for('about') }}">About us</a></li>
+            <li class="#"><a href="{{ url_for('profile')}}">Profile</a></li>
+            <li class="btn"><a href="{{ url_for('login') }}">Log in</a></li>
+          </ul>
+        </nav>
+      </header>
+
+      <div class="regist">
+        <div class="container">
+          <h2>Registration</h2>
+          <p>Enter your details below</p>
+
+          <form>
+            <div class="inline">
+              <div>
+                <label>Your Name</label>
+                <input type="text" />
+              </div>
+            </div>
+            <div class="inline"></div>
+            <label>Email Address</label>
+            <input type="email" class="one-list" />
+            <div>
+              <label>Enter Password</label>
+              <input type="text" />
+            </div>
+            <div>
+              <label>Repeat Password</label>
+              <input type="text" />
+            </div>
+
+            <button type="button">Reg</button>
+          </form>
+        </div>
+      </div>
+    </div>
+    <footer>
+      <div class="blocks container">
+        <div>
+          <p>The best website ever</p>
+        </div>
+        <div>
+          <h4>About us</h4>
+          <ul>
+            <li>Privacy Policy</li>
+            <li>License</li>
+            <li>Our managers</li>
+            <li>Our critics</li>
+          </ul>
+        </div>
+        <div>
+          <h4>Get a contract</h4>
+          <p>File a complaint</p>
+          <p>Support us</p>
+        </div>
+      </div>
+      <hr />
+      <p>Coopyright * 2024 All rights recerved</p>
+    </footer>
+  </body>
+</html>
