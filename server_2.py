@@ -1,7 +1,7 @@
 from flask import Flask, jsonify, request, send_file, send_from_directory,render_template
 import mysql.connector
 app = Flask(__name__)
-from crit_info import get_crit_db, close_crit_db, get_crit_info
+from crit_info import get_crit_info,get_crit_reviews
 import json
 
 
@@ -28,9 +28,7 @@ def serve_img_file(filename):
 
 @app.route('/', methods = ['GET', 'POST'])
 def home():
-    return render_template("index.html", info=get_crit_info())
-
-
+    return render_template("index.html", info=get_crit_info(),)
 
 @app.route('/about', methods = ['GET', 'POST'])
 def about():
@@ -45,8 +43,6 @@ def login():
     return  render_template('log.html')
 
 
-
-
 @app.route('/register', methods = ['GET', 'POST'])
 def register():
     return render_template('reg.html')
@@ -54,6 +50,11 @@ def register():
 @app.route('/critics', methods = ['GET', 'POST']) #все критики
 def crit_library():
     return render_template('crit_lib.html',info=get_crit_info())
+
+
+@app.route('/critic/<int:id>', methods = ['GET', 'POST']) #страница с обзорами определённого критика
+def critic(id):
+    return render_template('critic.html', reviews=get_crit_reviews(id))
 
 
 @app.route('/submit_login', methods=['POST'])

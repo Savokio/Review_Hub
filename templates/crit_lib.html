@@ -29,21 +29,32 @@
         </nav>
       </header>
       
-      {% for i in range (0,info|length) %}
+      
+      <section class="Lib">
+        {% for i in range (0,info|length) %}
+        <div class="card-lib">
+           <div class="card_container">
+            <img src="img/doug.jpg"  style="width:25%">
+            <span style="float:right;padding:1.0vw">{{ info[i]["review_amount"]}}</span> 
+            <h4 style="float:right;"><a href="/critic/{{info[i]["id"]}}" > {{ info[i]["name"] }} </a></h4>
+           {% if info[i]["avg_review"] <= 44 %} <!--Условие при котором мы отображем цвет оценки как низкий-->
+            <h4 style="color:red;"><b> {{ info[i]["avg_review"] }} </b></h4>
+           {% elif  info[i]["avg_review"] >= 56 %} <!--Условие при котором мы отображем цвет оценки как высокий-->
+            <h4 style="color:green;"><b> {{ info[i]["avg_review"] }} </b></h4>
+           {% else %}
+            <h4 style="color:yellow;text-aling:right"><b> {{ info[i]["avg_review"] }} </b></h4> <!--Условие при котором мы отображем цвет оценки как средний-->
+           {% endif %}
 
-      <div class="lib">
-      <div class="card">
-        <span style="float:right">{{ info[i]["review_amount"]}}</span>
-        <img src="img/doug.jpg"  style="width:10%"> 
-        <div class="card_container">
-        <h4><b> {{ info[i]["name"] }} </b></h4>
-      </div> 
-      {% if i%5==0 %}
+           </div>
+         </div>  
+        {% endfor %}
+      </section> 
+
       <!--</div> -->
-      {% endif %}    
+ 
       <!-- </div>  -->
       
-      {% endfor %}
+
     
     <div class="container email">
       <h3>GOT ANY QUESTIONS?</h3>

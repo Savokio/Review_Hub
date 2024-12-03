@@ -41,3 +41,24 @@ def get_crit_info():
     dump=json.dumps(json_data)
     loaded_r = json.loads(dump)
     return loaded_r
+
+"""Даёт данные о обзорах определенного критика order - то как сортировать список """
+def get_crit_reviews(id,order=""): 
+    db = get_crit_db()
+    cursor = db.cursor(buffered=True) 
+    cursor.execute("""SELECT  reviews.Critic_score, films.Film_name,reviews.Summary_text,reviews.Link
+    FROM reviews
+    INNER JOIN Films
+    on reviews.FIlm_id=films.id
+    INNER JOIN Critics
+    on reviews.Critic_id=critics.id
+    where critics.id="""+str(id)+"\n    "+order)  
+    json_data = [] #заготовка для файла json
+    row_headers=["crit_score","Film_name","review_summary"] #даёт наименования
+    Critic_info = cursor.fetchall()
+    for res in Critic_info:
+        json_data.append(dict(zip(row_headers,res)))
+    cursor.close()
+    dump=json.dumps(json_data)
+    loaded_r = json.loads(dump)
+    return loaded_r
