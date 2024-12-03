@@ -21,8 +21,7 @@ img {
 .logo{
   max-width: 4%;
   position: absolute;
-  top: 0;
-
+  top: 5px;
 }
 
 .wrapper {
@@ -109,20 +108,62 @@ header nav ul li.btn a:hover,
   width: 1400px;
   margin: 0 auto;
 }
-
-
-.lib-card{
-
-  
+/* 
+.grid-container {
+  display: grid;
+  column-gap: 5px;
+  grid-template-columns: auto auto auto auto;
 }
 
+.grid-item {
+  padding: 2px;
+  font-size: 3px;
+  text-align: center; */
+.Lib {
+
+    display: flex;
+    flex-wrap: wrap; 
+    margin-top: 1.0vw;
+    margin-left: 4.8vw;
+    width: 90.0vw;
+    padding: 5px;
+    border: 1px solid #D7DBDD;
+  }
+.card-lib {
+    /* Add shadows to create the "card" effect */
+    display: flexbox ;
+    flex-flow: column;
+    width: 25.0vw;
+    /* flex-flow: row; */
+    background-color: rgb(30, 25, 32);
+    margin-left: 0.5vw;
+    margin-bottom: 0.3vw;
+  }
+
+.card_container {
+    padding: 0.1vw 0.4vw 0.5vw;
+   
+  }
+  .stretched-link::after {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+    pointer-events: auto;
+    content: "";
+    background-color: rgba(0,0,0,0);
+}
 
 .card {
   /* Add shadows to create the "card" effect */
+  display: flexbox ;
+  flex-flow: row;
   background-color: rgb(30, 25, 32);
   box-shadow: 0 4px 8px 5px rgba(0,0,0,0.2);
   transition: 0.3s;
-  margin-left: 30px;
+  margin-left: 0.3vw;
 }
 
 /* On mouse-over, add a deeper shadow */
@@ -131,10 +172,7 @@ header nav ul li.btn a:hover,
 }
 
 /* SAVOK Add some padding inside the card container */
-.card_container {
-  padding: 10px 4px 5px;
- 
-}
+
 
 /* Add a black background color to the top navigation */
 .topnav {

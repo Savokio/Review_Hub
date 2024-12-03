@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ReviewHub</title>
+    <link rel="stylesheet" href="./templates/css/main.css" />
+  </head>
+  
+  <body>
+    <div class="wrapper">
+      <header class="topnav">
+        <img class=logo src="img/Untitled 7.png" alt="" /> <!--иконка -->
+        <form class="d-flex" role="search"> <!-- верхний поисковик-->
+          <input
+            class="form-control me-2"
+            type="search"
+            placeholder="Search"
+            aria-label="Search"/>
+        <nav>
+          <ul>
+            </form>
+            <li class="active"><a href="{{ url_for('home') }}">Home</a></li> <!-- url_for функция которая берёт url из app.route указанной функции-->
+            <li class="#"><a href="{{ url_for('about') }}">About us</a></li>
+            <li class="#"><a href="{{ url_for('profile')}}">Profile</a></li>
+            <li class="btn"><a href="{{ url_for('login') }}">Log in</a></li>
+          </ul>
+        </nav>
+      </header>
+      {{reviews}}
+      
+      <section class="Lib">
+        {% for i in range (0,info|length) %}
+        <div class="card-lib">
+           <div class="card_container">
+           <span style="float:right;padding:1.0vw">{{ reviews[i]["Film_name"]}}</span> 
+           <h4 style="float:right;"><b> {{  reviews[i]["review_summary"] }} </b></h4>
+           </a>
+           {% if  reviews[i]["crit_score"] <= 44 %} <!--Условие при котором мы отображем цвет оцеки как низкий-->
+           <h4 style="color:red;"><b> {{ reviews[i]["crit_score"] }} </b></h4>
+           {% elif reviews[i]["crit_score"] >= 56 %} <!--Условие при котором мы отображем цвет оцеки как высокий-->
+           <h4 style="color:green;"><b> {{ reviews[i]["crit_score"] }} </b></h4>
+           {% else %}
+           <h4 style="color:yellow;text-aling:right"><b> {{ reviews[i]["crit_score"] }} </b></h4> <!--Условие при котором мы отображем цвет оцеки как средний-->
+           {% endif %}
+           </div>
+         </div>  
+        {% endfor %}
+      </section> 
+
+
+      
+
+    
+    <div class="container email">
+      <h3>GOT ANY QUESTIONS?</h3>
+      <p>
+        We will be happy to contact you to discuss your questions and provide
+        assistance!
+      </p>
+      <div class="block">
+        <div>
+          <h4>Contact us</h4>
+          <p>Enter your email address</p>
+        </div>
+        <div>
+          <input
+            type="email"
+            id="emailField"
+            placeholder="Enter your email address"
+          />
+          <button onclick="checkEmail()">Continue</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <footer>
+    <div class="blocks container">
+      <div>
+        <p>The best website ever</p>
+      </div>
+      <div>
+        <h4>About us</h4>
+        <ul>
+          <li>Privacy Policy</li>
+          <li>License</li>
+          <li>Our managers</li>
+          <li>Our critics</li>
+        </ul>
+      </div>
+      <div>
+        <h4>Get a contract</h4>
+        <p>File a complaint</p>
+        <p>Support us</p>
+      </div>
+    </div>
+    <hr />
+    <p>Coopyright * 2024 All rights recerved</p>
+  </footer>
+  <script>
+    function checkEmail() {
+      let email = document.querySelector("#emailField");
+      alert(email.value);
+    }
+  </script>
+</body>
+</html>
